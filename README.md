@@ -23,9 +23,10 @@ The purpose of this application is to help allow users to be able to view and ma
 
 Link to video: [Walkthrough Video]() 💻
 
-## Screenshot
+## Screenshots
 
 ![image](https://user-images.githubusercontent.com/99767019/181298259-033873cb-f579-4120-8ecd-9f2c44fcfeee.png)
+![image](https://user-images.githubusercontent.com/99767019/181298976-c3bfb317-ff9c-4ab7-8ed1-d90326c4c328.png)
 
 ---
 
