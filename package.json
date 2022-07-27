@@ -1,0 +1,26 @@
+{
+  "name": "employeetracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "noder server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tydomx/EmployeeTracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tydomx/EmployeeTracker/issues"
+  },
+  "homepage": "https://github.com/Tydomx/EmployeeTracker#readme",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "inquirer": "^8.2.4",
+    "mysql2": "^2.3.3"
+  }
+}
