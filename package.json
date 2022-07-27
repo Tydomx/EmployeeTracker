@@ -1,7 +1,7 @@
 {
   "name": "employeetracker",
   "version": "1.0.0",
-  "description": "",
+  "description": "App that allows users to be able to view and manage departments, roles, and employees in a company to help the company organize and plan their business.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
