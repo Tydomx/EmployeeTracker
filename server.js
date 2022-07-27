@@ -214,6 +214,33 @@ function addEmployee() {
     })
 };
 
+// ******UPDATING****** //
+// update employee role
+function updateEmployee() {
+  inquirer.prompt([
+    {
+      type: 'list',
+      name: 'employee',
+      message: 'Which employee would you like to update?',
+      choices: employeeArr
+    },
+    {
+      type: 'list',
+      name: 'newRole',
+      message: "What is the employee's new role?",
+      choices: roleArr
+    }
+  ])
+    .then((ans) => {
+      updateRole(ans);
+      console.log('Role updated!');
+      employees = getEmployees();
+      employeeArr = employeeArrFill();
+      return startPrompt();
+    })
+};
+
+
 function end() {
   console.log('Good bye');
   setTimeout((function () {
