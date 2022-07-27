@@ -20,11 +20,12 @@ The purpose of this application is to help allow users to be able to view and ma
 
 ## Walkthrough Video:
 
-Link to video: [Walkthrough Video]()
+Link to video: [Walkthrough Video]() 💻
 
 ## Screenshot
 
-![image](https://user-images.githubusercontent.com/99767019/181151384-1ba0ebf0-0ed8-4c0a-b108-c12f01bc0ab5.png)
+![image](https://user-images.githubusercontent.com/99767019/181298259-033873cb-f579-4120-8ecd-9f2c44fcfeee.png)
+
 
 ---
 
