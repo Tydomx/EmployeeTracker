@@ -21,7 +21,7 @@ The purpose of this application is to help allow users to be able to view and ma
 
 ## Walkthrough Video:
 
-Link to video: [Walkthrough Video]() 💻
+Link to video: [Walkthrough Video](https://youtu.be/zuPKckAgIhE) 💻
 
 ## Screenshots
 
