@@ -8,7 +8,7 @@ VALUES
 	('Sales');
 
 INSERT INTO
-	role (title, salary, department_id)
+	roles (title, salary, department_id)
 VALUES
 	('Engineer', 100000, 1),
 	('Junior Engineer', 70000, 1),
