@@ -68,7 +68,7 @@ function startPrompt() {
         case 'Update employee role':
           updateEmployee();
           break;
-        case 'Exit':
+        case 'Quit':
           end();
           break;
       }
@@ -102,4 +102,121 @@ function viewDepartments() {
     console.table(res);
     startPrompt();
   })
+};
+
+// ******ADDING****** //
+// add department
+function addDepartment() {
+  inquirer.prompt([
+    {
+      type: 'input',
+      name: 'name',
+      message: 'What is the name of the department?',
+      validate: function (name) {
+        if (!name) {
+          console.log('Please enter a name')
+          return false;
+        }
+        return true;
+      }
+    }
+  ])
+    .then((ans) => {
+      const department = new Department(ans.name);
+      newDept(department);
+      console.log('Department added');
+      departments = getDept();
+      deptArr = deptArrFill();
+      return startPrompt();
+    })
+};
+
+
+// add new role
+function addRole() {
+  inquirer.prompt([
+    {
+      type: 'input',
+      name: 'addRole',
+      message: 'What role would you like to add?'
+    },
+    {
+      type: 'input',
+      name: 'salary',
+      message: 'What is the salary for this role?'
+    },
+    {
+      type: 'input',
+      name: 'department_id',
+      message: 'What is the department ID?'
+    }
+  ])
+    .then((ans) => {
+      var sql = `INSERT INTO roles (title, salary, department_id) VALUES (?,?,?)`;
+
+      db.query(sql, [ans.addRole, ans.salary, ans.department_id], (err, res) => {
+        if (err) throw err;
+        console.log('New role added');
+      })
+      startPrompt();
+    })
+};
+
+
+// add new employee
+function addEmployee() {
+  inquirer.prompt([
+    {
+      type: 'input',
+      name: 'firstName',
+      message: "What is the employee's first name?",
+      validate: function (firstName) {
+        if (!firstName) {
+          console.log('Please enter a name');
+          return false;
+        }
+        return true;
+      }
+    },
+    {
+      type: 'input',
+      name: 'lastName',
+      message: "What is the employee's last name?",
+      validate: function (lastName) {
+        if (!lastName) {
+          console.log('Please enter a name');
+          return false;
+        }
+        return true;
+      }
+    },
+    {
+      type: 'list',
+      name: 'role',
+      message: "What is the employee's role?",
+      choices: roleArr
+    },
+    {
+      type: 'list',
+      name: 'manager',
+      message: "Who is the employee's manager?",
+      choices: [{ name: 'No manager', value: null }].concat(employeeArr)
+    },
+  ])
+    .then((ans) => {
+      var sql = `INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES (?,?,?,?)`;
+
+      db.query(sql, [ans.firstName, ans.lastName, ans.role, ans.manager], (err, res) => {
+        if (err) throw err;
+        console.log('New employee added');
+      })
+      return startPrompt();
+    })
+};
+
+function end() {
+  console.log('Good bye');
+  setTimeout((function () {
+    return process.exit(22);
+  }), 0);
 };
