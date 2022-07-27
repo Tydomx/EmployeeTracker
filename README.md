@@ -17,6 +17,7 @@ The purpose of this application is to help allow users to be able to view and ma
 - Add a new employee
 - Add a new job role
 - Add a new department
+- Update employee role
 
 ## Walkthrough Video:
 
@@ -25,7 +26,6 @@ Link to video: [Walkthrough Video]() 💻
 ## Screenshot
 
 ![image](https://user-images.githubusercontent.com/99767019/181298259-033873cb-f579-4120-8ecd-9f2c44fcfeee.png)
-
 
 ---
 
